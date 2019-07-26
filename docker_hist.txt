@@ -1,0 +1,283 @@
+    8  sudo apt-get remove docker docker-engine docker.io containerd runc
+   10  sudo apt-get install docker-ce docker-ce-cli containerd.io
+   12  sudo apt-get install docker-ce docker-ce-cli containerd.io
+   14  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+   17  sudo add-apt-repository    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   23  sudo apt-get install docker-ce docker-ce-cli containerd.io
+   24  sudo docker run hello-world
+   25  docker volume ls
+   26  sudo docker volume ls
+   27  sudo docker ps
+   28  sudo docker ps -a
+   29  docker --version
+   30  docker info
+   31  sudo docker info
+   32  sudo docker pull justb4/jmeter
+   34  docker ps
+   35  sudo docker ps
+   36  sudo docker ps -a
+   37  sudo docker image ls
+   38  sudo docker run 23decfed490d -it bash
+   39  sudo docker ps
+   40  sudo docker ps -a
+   41  sudo docker run 23decfed490d
+   42  sudo docker ps
+   53  https://github.com/justb4/docker-jmeter.git
+   54  sudo git clone https://github.com/justb4/docker-jmeter.git
+   56  cd docker-jmeter/
+   75  cd docker-jmeter/
+  112  cd docker-jmeter/
+  127  sudo docker image -ls
+  128  sudo docker image ls
+  129  sudo docker ps
+  130  sudo docker ps -a
+  131  sudo docker logs
+  132  sudo docker images
+  164  sudo docker image -ls
+  165  sudo docker image ls
+  166  sudo docker create -it 3e318ab4342a sh 
+  167  sudo docker ps
+  168  sudo docker ps -a
+  169  sudo docker start 3e318ab4342a
+  170  sudo docker ps -a
+  171  sudo docker start 382e2cf8d4c6
+  172  docker ps
+  173  sudo docker ps
+  174  sudo docker ps -a
+  178  sudo docker ls
+  179  sudo docker -ls
+  180  sudo docker ls
+  184  sudo docker ps
+  185  sudo docker ps -a
+  186  sudo docker image ls
+  187  docker ps
+  188  sudo groupadd docker
+  189  sudo gpasswd -a $USER docker
+  190  sudo service docker restart
+  191  sudo service docker.io restart
+  192  docker ps
+  193  docker ps -a
+  195  sudo docker image ls
+  196  docker image ls
+  197  docker ps -a
+  198  docker rm $(docker ps -a -f status=exited -q)
+  199  docker ps -a
+  202  cd docker
+  207  sudo docker image ls
+  214  cd docker
+  215  cd docker-jmeter/
+  219  docker image ls
+  220  docker ps
+  221  docker ps -a
+  222  docker ps
+  223  docker ps -a
+  225  docker image ls
+  226  docker run 3e318ab4342a -it bash
+  227  docker run 3e318ab4342a -it sh
+  232  docker pull alpine
+  233  docker image ls
+  234  docker run -it b7b28af77ffe /bin/sh
+  235  docker exec -it 657258c183fe
+  236  docker exec -it 657258c183fe /bin/sh
+  237  docker image ls
+  238  docker ps -a
+  239  docker ps
+  240  docker -a
+  241  docker ps -a
+  242  docker 657258c183fe kill
+  243  docker stop$(docker ps -a -q)
+  244  docker ps -a
+  245  docker kill 657258c183fe
+  246  docker ps -a
+  247  docker rm $(docker ps -a -f status=exited -q)
+  248  docker ps -a
+  250  docker pull ubuntu
+  251  docker ps -a
+  252  docker image ls
+  254  docker image ls
+  259  docker image ls
+  260  docker ps -a
+  261  docker rm $(docker ps -a -f status=exited -q)
+  262  docker ps -a
+  263  docker network create -d overlay MyOverlayNetwork
+  264  docker swarm init
+  265  docker network ls
+  266  docker ps -a
+  267  docker image ls
+  268  docker run -it -d --network=MyOverlayNetwork 4c108a37151f /bin/bash
+  269  docker network create -d bridge  MyOverlayNetwork
+  270  docker run -it -d --network=MyOverlayNetwork 4c108a37151f /bin/bash
+  271  docker image ls
+  272  docker ps -a
+  273  docker exec -it ab107217cf37 /bin/sh
+  274  docker ps -a
+  275  docker -it exec festive_franklin
+  276  docker exec -it festive_franklin bash
+  279  docker ps -a
+  280  docker commit festive_franklin:v1
+  281  docker commit ab107217cf37 festive_franklin:v1
+  282  docker images
+  283  docker run -it b7b28af77ffe /bin/sh
+  284  docker ps
+  285  docker exec -it festive_franklin bash
+  287  docker commit ab107217cf37 festive_franklin:v2
+  289  docker ps
+  290  docker ps -a
+  291  docker images
+  292  docker rm $(docker ps -a -f status=exited -q)
+  293  docker kill ab107217cf37
+  294  docker ps -a
+  295  docker kill ce930deeaa58
+  296  docker rm $(docker ps -a -f status=exited -q)
+  305  docker images
+  310  docker images
+  312  docker run -it -v /home/rizvashi/voluem_test:/home 54b4390949b9
+  314  docker ps
+  315  docker ps -a
+  316  docker images
+  317  docker run -it -v /home/rizvashi/voluem_test:/home 54b4390949b9 bash
+  318  docker ps
+  319  docker run -it -v /home/rizvashi/voluem_test:/home 54b4390949b9 bin/bash
+  320  docker ps
+  321  docker ps -a
+  322  docker rm $(docker ps -a -f status=exited -q)
+  324  docker exec -it -v /home/rizvashi/voluem_test:/home 54b4390949b9 bin/bash
+  325  docker exec -it 54b4390949b9 bin/bash
+  328  docker ps
+  329  docker ps -a
+  330  docker images
+  331  docker exec -v /home/rizvashi/voluem_test:/home -it 54b4390949b9 bin/bash
+  332  docker run -v /home/rizvashi/voluem_test:/home -it 54b4390949b9 bin/bash
+  333  docker ps
+  334  docker images 
+  335  docker run -it 14cf96ebd910 bin/bash
+  339  cd docker
+  340  docker image ls
+  341  docker ps -a
+  342  docker ps
+  345  cd docker-jmeter/
+  371  docker ps
+  372  docker ps -a
+  373  docker image ls
+  374  docker rm $(docker ps -a -f status=exited -q)
+  376  docker run -it 055936d39205
+  377  docker image ls
+  378  docker history justb4/jmeter
+  379  docker run -i -t 3e318ab4342a
+  380  docker run -i -t 3e318ab4342a /bin/sh
+  381  docker image ls
+  382  docker ps
+  383  docker ps-a
+  384  docker ps -a
+  385  docker rm $(docker ps -a -f status=exited -q)
+  386  docker ps -a
+  387  docker rm $(docker ps -a -f status=exited -q)
+  388  docker ps -a
+  389  docker image ls
+  390  docker ps -a
+  398  docker ps
+  399  docker commit d6cee500d62f jolly_turing:v3
+  400  docker image ls
+  401  docker ps
+  415  mkdir my_docker_file
+  416  cd my_docker_file/
+  429  docker build -t jm_v1 .
+  431  docker images -a
+  432  docker images
+  433  docker ps
+  434  docker ps -a
+  435  docker build -t jm_v1 .
+  436  docker ps -a
+  437  docker images
+  438  docker ps -a
+  439  docker images
+  440  docker run -it  513fc0469786 /bin/bash
+  441  docker run -it  513fc0469786 /bin/sh
+  442  docker run -it  513fc0469786 sh
+  443  docker run -it  513fc0469786
+  446  docker run -it  513fc0469786 sh
+  447  docker run -it  513fc0469786 /bin/sh -c
+  448  docker run -it --entrypoint [bin/sh] 513fc0469786
+  449  docker run -it --entrypoint [/bin/sh] 513fc0469786
+  450  docker run -it --entrypoint [/bin/bash] 513fc0469786
+  451  docker run -it --entrypoint [/sh] 513fc0469786
+  452  docker run --entrypoint [/sh] 513fc0469786
+  453  docker run --entrypoint [/bin/sh] 513fc0469786
+  454  docker run --entrypoint [/bin/bash] 513fc0469786
+  455  docker run --entrypoint [./bin/bash] 513fc0469786
+  456  docker rm $(docker ps -a -f status=exited -q)
+  458  docker build -t jm_v2 .
+  459  docker images
+  460  docker run -it 431ed2d5c463
+  500  cd my_docker_file/
+  510  docker ps
+  511  docker ps -a
+  512  docker rm $(docker ps -a -f status=exited -q)
+  513  docker ps -a
+  514  docker stop c0d82c7e654c
+  515  docker stop ce930deeaa58
+  516  docker rm $(docker ps -a -f status=exited -q)
+  517  docker images
+  518  docker image rm b7b28af77ffe, 055936d39205, 23decfed490d
+  519  docker images
+  520  docker images rm 23decfed490d
+  521  docker image rm 23decfed490d
+  522  docker ps -a
+  523  docker stop ce930deeaa58
+  524  docker images
+  525  docker rmi fce289e99eb9 
+  526  docker images
+  527  docker rmi 055936d39205
+  528  docker stop $(docker ps -a -q)
+  529  docker rm $(docker ps -a -q)
+  530  docker system prune
+  531  docker system prune -a
+  532  docker images -a
+  533  docker ps -a
+  534  docker images -a
+  535  docker pull alpine:3:10
+  536  docker pull alpine:3.10
+  537  docker images -a
+  539  docker pull alpine:3.10 .
+  540  docker images -a
+  541  docker run -- name my_attempt -it b7b28af77ffe /bin/sh 
+  542  docker run -it b7b28af77ffe /bin/sh
+  545  docker conteiner ls
+  546  docker container ls
+  547  docker ps
+  548  docker kill 750d73a25e39 
+  549  docker ps -a
+  550  docker rm $(docker ps -a -f status=exited -q)
+  551  docker ps -aq
+  552  docker stop $(ps -aq)
+  553  docker rm $(ps -aq)
+  554  docker rm $(ps -a)
+  555  docker rmi $(docker images -q)
+  556  docker ps -aq
+  557  docker stop $(docker ps -aq)
+  558  docker rm $(docker ps -aq)
+  559  docker rmi $(docker images -q)
+  560  docker -ps
+  561  docker ps
+  562  docker ps-a
+  563  docker ps -a
+  573  cd docker-jmeter/
+  577  my_docker_file/
+  580  cd my_docker_file/
+  588  docker build -t try_jv .
+  590  docker build -t try_jv .
+  591  docker ps
+  592  docker ps -a
+  593  docker images
+  594  docker build -t try_jv1 .
+  595  docker images
+  596  sudo docker run -name attempt -i -t f36a131372ef
+  597  sudo docker run --name attempt -i -t f36a131372ef
+  605  docker -ps
+  606  docker ps
+  607  docker ps -a
+  608  docker rm $(docker ps -a -f status=exited -q)
+  613  history | grep docker
+  614  history | grep docker | awk
+  615  history | grep docker 
+  616  history | grep docker > docker_hist.txt

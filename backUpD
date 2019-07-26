@@ -1,0 +1,53 @@
+# Docker image for perfomance test with Jmeter  
+FROM alpine:3.10
+
+MAINTAINER RizvashI <rizvashi@coins.exchange>
+
+ARG JMETER_VERSION="5.1.1"
+ENV JMETER_HOME /opt/apache-jmeter-${JMETER_VERSION}
+ENV	JMETER_BIN	${JMETER_HOME}/bin
+ENV	JMETER_DOWNLOAD_URL  https://archive.apache.org/dist/jmeter/binaries/apache-jmeter-${JMETER_VERSION}.tgz
+
+# Install extra packages
+ARG TZ="Europe/Amsterdam"
+RUN    apk update \
+        && apk update \
+        && apk upgrade \
+        && apk add nano \
+	&& apk add net-tools \
+        && apk add bash \
+        && apk add htop \
+        && apk add git \
+        && apk add wget \
+        && apk add curl \
+	&& apk add ca-certificates \
+        && apk update \
+        && apk upgrade \
+	&& update-ca-certificates \
+# Install Java
+	&& apk add --update openjdk8-jre tzdata curl unzip bash \
+	&& apk add --no-cache nss \
+	&& rm -rf /var/cache/apk/* \
+        && rm -rf /tmp/jm_t/dependencies \
+	&& mkdir -p /tmp/jm_t/dependencies \
+# Install Jmeter 
+	&& curl -L --silent ${JMETER_DOWNLOAD_URL} >  /tmp/jm_t/dependencies/apache-jmeter-${JMETER_VERSION}.tgz  \
+	&& mkdir -p /opt/jm \
+	&& tar -xzf /tmp/jm_t/dependencies/apache-jmeter-${JMETER_VERSION}.tgz -C /opt/jm \
+	&& rm -rf /tmp/jm_t/dependencies \
+        && apk update \
+        && apk upgrade \
+
+# TODO: plugins (later)
+# && unzip -oq "/tmp/dependencies/JMeterPlugins-*.zip" -d $JMETER_HOME
+
+# Set global PATH such that "jmeter" command is found
+ENV PATH $PATH:$JMETER_BIN
+
+# Entrypoint has same signature as "jmeter" command
+#COPY entrypoint.sh /
+
+#WORKDIR	${JMETER_HOME}
+
+#ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["/bin/bash"]
